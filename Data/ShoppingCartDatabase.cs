@@ -17,8 +17,25 @@ namespace Proiect_Magazin_Mobile.Data
             _database.CreateTableAsync<ShopCart>().Wait();
             _database.CreateTableAsync<Feature>().Wait();
             _database.CreateTableAsync<ListFeature>().Wait();
+            _database.CreateTableAsync<Store>().Wait();
 
         }
+        public Task<List<Store>> GetStoresAsync()
+        {
+            return _database.Table<Store>().ToListAsync();
+        }
+        public Task<int> SaveStoreAsync(Store store)
+        {
+            if (store.ID != 0)
+            {
+                return _database.UpdateAsync(store);
+            }
+            else
+            {
+                return _database.InsertAsync(store);
+            }
+        }
+
         public Task<int> SaveListFeatureAsync(ListFeature listf)
         {
             if (listf.ID != 0)
@@ -30,6 +47,18 @@ namespace Proiect_Magazin_Mobile.Data
                 return _database.InsertAsync(listf);
             }
         }
+
+        public Task<int> DeleteListFeatureAsync(ListFeature listf)
+        {
+            return _database.DeleteAsync(listf);
+        }
+        public Task<ListFeature> GetListFeatureAsync(int shopcartid, int cartid)
+        {
+            return _database.Table<ListFeature>().Where(i => (i.ShopCartID == shopcartid && i.FeatureID == cartid)).FirstOrDefaultAsync();
+
+        }
+
+
         public Task<List<Feature>> GetListFeaturesAsync(int shopcartid)
         {
             return _database.QueryAsync<Feature>(
@@ -87,6 +116,7 @@ namespace Proiect_Magazin_Mobile.Data
         {
             return _database.DeleteAsync(slist);
         }
+       
     }
 }
 

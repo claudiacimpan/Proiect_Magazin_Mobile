@@ -18,6 +18,9 @@
         <ShellContent
  Title="My Cart"
  ContentTemplate="{DataTemplate local:ListEntryPage}"
+ />        <ShellContent
+ Title="My Stores"
+ ContentTemplate="{DataTemplate local:StoreEntryPage}"
  />
     </TabBar>
 </Shell>

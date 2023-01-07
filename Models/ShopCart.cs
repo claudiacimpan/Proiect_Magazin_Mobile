@@ -1,4 +1,5 @@
 ﻿using SQLite;
+using SQLiteNetExtensions.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +15,7 @@ namespace Proiect_Magazin_Mobile.Models
         [MaxLength(250), Unique]
         public string Description { get; set; }
         public DateTime Date { get; set; }
+        [ForeignKey(typeof(Store))]
+        public int StoreID { get; set; }
     }
 }

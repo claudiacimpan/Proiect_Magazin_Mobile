@@ -49,7 +49,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+	  <PackageReference Include="Plugin.LocalNotification" Version="10.0.3" />
+	  <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
 	  <PackageReference Include="SQLiteNetExtensions" Version="2.1.0" />
 	</ItemGroup>
 
@@ -64,6 +65,12 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ListPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="StoreEntryPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="StorePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
