@@ -11,9 +11,9 @@ public partial class ListEntryPage : ContentPage
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-        listView.ItemsSource = await App.Database.GetShopListsAsync();
+        listView.ItemsSource = await App.Database.GetShopCartsAsync();
     }
-    async void OnShopListAddedClicked(object sender, EventArgs e)
+    async void OnShopCartAddedClicked(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new ListPage
         {

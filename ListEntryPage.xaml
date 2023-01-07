@@ -4,8 +4,7 @@
              x:Class="Proiect_Magazin_Mobile.ListEntryPage"
              Title="ListEntryPage">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add Clothes"
- Clicked="OnShopListAddedClicked" />
+        <ToolbarItem Text="Add Clothes" Clicked="OnShopCartAddedClicked" />
     </ContentPage.ToolbarItems>
     <ListView x:Name="listView"
  Margin="20"
