@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proiect_Magazin_Mobile.AboutPage"
+             Title="About">
+    <VerticalStackLayout Spacing="10" Margin="10">
+        <HorizontalStackLayout Spacing="10">
+            <Image Source="home.jpg"
+ SemanticProperties.Description="My Cart"
+HeightRequest="64" />
+            <Label FontSize="22" FontAttributes="Bold" Text="My Cart" VerticalOptions="End" />
+            <Label FontSize="22"  VerticalOptions="End" />
+        </HorizontalStackLayout>
+        <Label Text="This app will help you to manage your cart from our clothes store!" />
+
+    </VerticalStackLayout>
+</ContentPage>
