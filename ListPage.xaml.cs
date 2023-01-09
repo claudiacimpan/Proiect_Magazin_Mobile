@@ -10,11 +10,13 @@ public partial class ListPage : ContentPage
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-        var items = await App.Database.GetStoresAsync();
-        ShopPicker.ItemsSource = (System.Collections.IList)items;
-        ShopPicker.ItemDisplayBinding = new Binding("ShopDetails");
+       // var items = await App.Database.GetStoresAsync();
+       // StorePicker.ItemsSource = (System.Collections.IList)items;
+       // StorePicker.ItemDisplayBinding = new Binding("ShopDetails");
+       
         var shopc = (ShopCart)BindingContext;
 
+        
         listView.ItemsSource = await App.Database.GetListFeaturesAsync(shopc.ID);
     }
     async void OnChooseButtonClicked(object sender, EventArgs e)
@@ -30,8 +32,8 @@ public partial class ListPage : ContentPage
     {
         var slist = (ShopCart)BindingContext;
         slist.Date = DateTime.UtcNow;
-        Store selectedStore = (ShopPicker.SelectedItem as Store);
-        slist.StoreID = selectedStore.ID;
+        //Store selectedStore = (StorePicker.SelectedItem as Store);
+        //slist.StoreID = selectedStore.ID;
         await App.Database.SaveShopCartAsync(slist);
         await Navigation.PopAsync();
     }

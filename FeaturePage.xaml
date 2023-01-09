@@ -7,7 +7,7 @@
         <StackLayout Margin="20">
             <Editor Placeholder="Enter feature name" Margin="20"
  Text="{Binding Description}"
- HeightRequest="50" />
+ HeightRequest="100" />
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />

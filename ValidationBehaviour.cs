@@ -21,8 +21,8 @@ namespace Proiect_Magazin_Mobile
         void OnEntryTextChanged(object sender, TextChangedEventArgs args)
         {
             ((Editor)sender).BackgroundColor =
-string.IsNullOrEmpty(args.NewTextValue) ? Color.FromRgba("#FF0000") :
-Color.FromRgba("#000000");
+string.IsNullOrEmpty(args.NewTextValue) ? Color.FromRgba("#fff8dc") :
+Color.FromRgba("#ffffff");
         }
     }
 }
